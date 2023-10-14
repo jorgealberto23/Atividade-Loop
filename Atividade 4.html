@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 4</title>
+</head>
+<body>
+    <h1>jogo de adivinhação</h1>
+    <h3><Div id = "resultado"></Div></h3>
+
+    <script>
+        let p1 = Number(prompt("jogador 1, escolha um número entre 1 e 10"));
+        let p2 = Number(prompt("jogador 2, tente adivinhar qual o numero escolhido do jogador 1"));
+        let tentativa = Number(1);
+        let resultado;
+
+        if (p1 <= 10 && p1 >= 1) {
+            while (p2 !== p1) {
+        tentativa = tentativa + 1
+        p2 = Number(prompt("jogador 2, tente adivinhar qual o numero escolhido do jogador 1"));
+    }
+        resultado= "Você acertor o numero escolhido pelo jogador 1 que é " +  p1 + " em " + tentativa + " tentativa(s)";
+        }else{
+        resultado = "O jogador 1 digitou um valor invalido"
+    }
+ 
+    document.getElementById("resultado").innerHTML = resultado
+    </script>
+</body>
+</html>
